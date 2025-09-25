@@ -1,7 +1,10 @@
 import axios from 'axios';
 
-// API Base URL from environment variable (updated for Vercel deployment)
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://school-payment-backend-ngy.vercel.app/api';
+// API Base URL - temporarily hardcoded for deployment
+const API_BASE_URL = 'https://school-payment-backend-ngy.vercel.app/api';
+
+// Debug: Log the API URL
+console.log('🔧 API_BASE_URL:', API_BASE_URL);
 
 // Create axios instance
 const api = axios.create({
