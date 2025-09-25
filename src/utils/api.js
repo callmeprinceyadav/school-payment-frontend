@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // API Base URL - temporarily hardcoded for deployment
-const API_BASE_URL = 'https://school-payment-backend-ngy.vercel.app/api';
+const API_BASE_URL = 'https://school-payment-backend-five.vercel.app/api';
 
 // Debug: Log the API URL
 console.log('🔧 API_BASE_URL:', API_BASE_URL);
