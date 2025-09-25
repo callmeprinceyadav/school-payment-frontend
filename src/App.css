@@ -1,0 +1,29 @@
+/* App.css - Simplified Layout */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Main app layout */
+.app-layout {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Main content area - full width */
+.main-content {
+  min-height: 100vh;
+  width: 100%;
+  background: #f5f7fa;
+  overflow-x: hidden;
+}

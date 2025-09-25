@@ -1,0 +1,339 @@
+/* School Transactions Page - Clean & Responsive */
+
+.transactions-by-school-page {
+  min-height: 100vh;
+  background-color: transparent;
+  overflow-x: hidden;
+}
+
+.page-content {
+  padding: 25px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Search Panel */
+.search-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.search-header {
+  margin-bottom: 20px;
+}
+
+.search-header h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.search-header p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.search-controls {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.input-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.school-id-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ecf0f1;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  font-family: 'Courier New', monospace;
+}
+
+.school-id-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.school-id-input::placeholder {
+  color: #bdc3c7;
+}
+
+.search-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+  white-space: nowrap;
+  min-width: 180px;
+}
+
+.search-btn:hover {
+  background: #2980b9;
+}
+
+.search-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Error Alert */
+.error-alert {
+  background: #fdf2f2;
+  color: #e53e3e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #fed7d7;
+  font-weight: 500;
+}
+
+/* Results Summary */
+.results-summary {
+  margin-bottom: 25px;
+}
+
+.summary-card {
+  background: #e8f5e8;
+  border: 1px solid #c6f6c6;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60;
+}
+
+.summary-card h4 {
+  margin: 0 0 8px 0;
+  color: #27ae60;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.summary-card p {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+/* School Transactions Table */
+.school-transactions-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  height: 600px;
+  overflow: hidden;
+}
+
+.school-data-grid {
+  border: none !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Table cell styles (reuse from Dashboard) */
+.order-number {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #3498db;
+  font-size: 13px;
+}
+
+.student-info {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.student-email {
+  color: #7f8c8d;
+  font-size: 13px;
+}
+
+.payment-amount {
+  font-weight: bold;
+  color: #27ae60;
+  font-family: 'Courier New', monospace;
+}
+
+.payment-status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-success {
+  background: #d5f4e6;
+  color: #27ae60;
+}
+
+.payment-pending {
+  background: #fef5e7;
+  color: #f39c12;
+}
+
+.payment-failed {
+  background: #fdeaea;
+  color: #e74c3c;
+}
+
+.payment-unknown {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.payment-method {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: capitalize;
+}
+
+.transaction-time {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+/* Custom overlays */
+.no-data-overlay, .loading-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.no-data-content, .loading-overlay {
+  text-align: center;
+  color: #7f8c8d;
+}
+
+.no-data-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.no-data-content h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.no-data-content p {
+  margin: 4px 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.loading-spinner {
+  font-size: 32px;
+  margin-bottom: 12px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .school-transactions-page {
+    padding: 15px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-panel {
+    padding: 20px;
+  }
+  
+  .search-controls {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .input-group {
+    min-width: auto;
+  }
+  
+  .search-btn {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .school-transactions-table {
+    height: 500px;
+  }
+  
+  .summary-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .school-transactions-page {
+    padding: 12px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+  
+  .search-panel {
+    padding: 15px;
+  }
+  
+  .school-transactions-table {
+    height: 450px;
+  }
+  
+  /* Hide some columns on very small screens */
+  .school-data-grid .MuiDataGrid-cell[data-field="student_email"],
+  .school-data-grid .MuiDataGrid-cell[data-field="payment_mode"],
+  .school-data-grid .MuiDataGrid-columnHeader[data-field="student_email"],
+  .school-data-grid .MuiDataGrid-columnHeader[data-field="payment_mode"] {
+    display: none;
+  }
+}

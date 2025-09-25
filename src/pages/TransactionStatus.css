@@ -1,0 +1,434 @@
+/* ==================== Transaction Status Page ==================== */
+
+.transaction-status-page {
+  min-height: 100vh;
+}
+
+.page-content {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #1a1a1a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ==================== Search Panel ==================== */
+
+.status-search-panel {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eaed;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.search-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.search-header p {
+  color: #5f6368;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.search-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-label {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+}
+
+.order-id-input {
+  padding: 14px 16px;
+  border: 2px solid #e8eaed;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.order-id-input:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 4px rgba(66, 133, 244, 0.1);
+}
+
+.order-id-input::placeholder {
+  color: #9aa0a6;
+}
+
+.status-search-btn {
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-search-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(66, 133, 244, 0.4);
+}
+
+.status-search-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ==================== Error Alert ==================== */
+
+.error-alert {
+  background: #fef7f0;
+  border: 1px solid #fce8e6;
+  border-left: 4px solid #ea4335;
+  padding: 16px 20px;
+  border-radius: 8px;
+  color: #d33b2c;
+  font-weight: 500;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==================== Transaction Details ==================== */
+
+.transaction-details {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8eaed;
+}
+
+/* Status Header */
+.status-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8eaed 100%);
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.status-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.status-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.status-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #1a1a1a;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.status-badge.status-success {
+  background: #e8f5e8;
+  color: #137333;
+  border: 1px solid #c6e7c6;
+}
+
+.status-badge.status-pending {
+  background: #fef7e0;
+  color: #ea8600;
+  border: 1px solid #fdd663;
+}
+
+.status-badge.status-failed {
+  background: #fce8e6;
+  color: #d33b2c;
+  border: 1px solid #f9ab9a;
+}
+
+.status-badge.status-unknown {
+  background: #f1f3f4;
+  color: #5f6368;
+  border: 1px solid #dadce0;
+}
+
+.status-message {
+  color: #5f6368;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.status-time {
+  text-align: right;
+}
+
+.time-label {
+  font-size: 0.875rem;
+  color: #5f6368;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.time-value {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+/* Transaction Information */
+.transaction-info {
+  padding: 32px;
+}
+
+.info-section {
+  margin-bottom: 40px;
+}
+
+.info-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f1f3f4;
+}
+
+.info-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.info-value {
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.info-value.monospace {
+  font-family: 'Courier New', monospace;
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.info-value.amount {
+  font-weight: 700;
+  color: #137333;
+  font-size: 1.1rem;
+}
+
+.info-value.error-text {
+  color: #d33b2c;
+  font-weight: 500;
+}
+
+/* ==================== Empty State ==================== */
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  padding: 60px 20px;
+}
+
+.empty-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.empty-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.empty-content p {
+  color: #5f6368;
+  font-size: 1rem;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.help-text {
+  font-size: 0.875rem !important;
+  color: #9aa0a6 !important;
+  font-style: italic;
+}
+
+/* ==================== Responsive Design ==================== */
+
+@media (max-width: 768px) {
+  .transaction-status-page {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+
+  .status-search-panel {
+    padding: 24px 20px;
+  }
+
+  .search-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .status-header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .status-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .status-time {
+    text-align: center;
+  }
+
+  .transaction-info {
+    padding: 24px 20px;
+  }
+
+  .info-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .info-label {
+    font-size: 0.875rem;
+  }
+
+  .info-value {
+    font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .search-controls {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction-status-page {
+    padding: 12px;
+  }
+
+  .status-search-panel {
+    padding: 20px 16px;
+  }
+
+  .status-header {
+    padding: 20px 16px;
+  }
+
+  .transaction-info {
+    padding: 20px 16px;
+  }
+
+  .status-icon {
+    font-size: 2.5rem;
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,420 @@
+/* Payment Dashboard - Clean & Simple CSS */
+
+/* Main dashboard container */
+.payment-dashboard {
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navigation Header */
+.nav-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.nav-brand .page-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Page content wrapper */
+.page-content {
+  padding: 25px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Page title */
+.page-title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Statistics cards section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stats-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.stats-card.total-transactions {
+  border-left: 5px solid #3498db;
+}
+
+.stats-card.successful-payments {
+  border-left: 5px solid #2ecc71;
+}
+
+.stats-card.pending-payments {
+  border-left: 5px solid #f39c12;
+}
+
+.stats-card.failed-payments {
+  border-left: 5px solid #e74c3c;
+}
+
+.stats-icon {
+  font-size: 36px;
+  margin-right: 18px;
+}
+
+.stats-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.stats-count {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Filter controls section */
+.filter-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.refresh-data-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.refresh-data-btn:hover {
+  background: #2980b9;
+}
+
+.refresh-data-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.filter-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.text-input,
+.select-input {
+  padding: 12px;
+  border: 2px solid #ecf0f1;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.text-input:focus,
+.select-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Error alert */
+.error-alert {
+  background: #fdf2f2;
+  color: #e53e3e;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #fed7d7;
+  font-weight: 500;
+}
+
+/* Data table section */
+.transactions-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  height: 600px;
+  overflow: hidden;
+}
+
+.payment-data-grid {
+  border: none !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Table cell content styles */
+.order-number {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #3498db;
+  font-size: 13px;
+}
+
+.student-info {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.payment-amount {
+  font-weight: bold;
+  color: #27ae60;
+  font-family: 'Courier New', monospace;
+}
+
+.payment-status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-success {
+  background: #d5f4e6;
+  color: #27ae60;
+}
+
+.payment-pending {
+  background: #fef5e7;
+  color: #f39c12;
+}
+
+.payment-failed {
+  background: #fdeaea;
+  color: #e74c3c;
+}
+
+.payment-unknown {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.payment-method {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: capitalize;
+}
+
+.transaction-time {
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.school-info {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #95a5a6;
+}
+
+/* Mobile and Tablet Responsive Design */
+@media (max-width: 768px) {
+  .payment-dashboard {
+    padding: 15px;
+    min-height: calc(100vh - 60px);
+  }
+  
+  .page-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .stats-card {
+    padding: 18px;
+  }
+  
+  .stats-icon {
+    font-size: 28px;
+    margin-right: 12px;
+  }
+  
+  .stats-count {
+    font-size: 22px;
+  }
+  
+  .filter-panel {
+    padding: 18px;
+  }
+  
+  .filter-inputs {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .filter-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .transactions-table {
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-dashboard {
+    padding: 12px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+  
+  .stats-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .stats-card {
+    padding: 15px;
+  }
+  
+  .stats-icon {
+    font-size: 24px;
+  }
+  
+  .stats-count {
+    font-size: 20px;
+  }
+  
+  .filter-panel {
+    padding: 15px;
+  }
+  
+  .transactions-table {
+    height: 450px;
+  }
+  
+  /* Hide less important columns on small screens */
+  .payment-data-grid .MuiDataGrid-cell[data-field="payment_mode"],
+  .payment-data-grid .MuiDataGrid-cell[data-field="school_id"],
+  .payment-data-grid .MuiDataGrid-columnHeader[data-field="payment_mode"],
+  .payment-data-grid .MuiDataGrid-columnHeader[data-field="school_id"] {
+    display: none;
+  }
+}
